@@ -1,0 +1,27 @@
+package Main;
+import java.util.Scanner;
+
+
+public class Client {
+    String cname;
+    String clogin;
+    String cpass;
+    int userchoise;
+
+    Scanner in = new Scanner(System.in);
+    Scanner in1 = new Scanner(System.in);
+    Scanner in2 = new Scanner(System.in);
+public  void  setCname(){
+    System.out.println("Введите имя : ");
+    this.cname = in.nextLine();
+    System.out.println("Войдите или зарегестрируйтесь :(Введите цифру) ");
+    System.out.println("1.Вход. ");
+    System.out.println("2.Регистрация. ");
+    this.userchoise  = in.nextInt();
+    if (userchoise == 1)
+    {
+    String cl =  in1.nextLine();
+    String cp =  in2.nextLine();
+    }
+}
+}
