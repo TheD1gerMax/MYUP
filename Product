@@ -1,0 +1,52 @@
+package Main;
+
+import java.util.Scanner;
+
+public class Product {
+    Scanner in = new Scanner(System.in);
+    Scanner in1 = new Scanner(System.in);
+
+    private int price;
+    private String info;
+    private boolean delivery;
+    private String nameofprod;
+    //
+    Product(int c,String i,boolean del, String name)
+    {
+        this.nameofprod = name;
+        this.price = c;
+        this.info = i;
+        this.delivery = del;
+    }
+    Product()
+    {
+        this.nameofprod = "Unnamed";
+        this.price = 0;
+        this.info = "Not correct!";
+        this.delivery = false;
+    }
+
+    public void ProductConsoleIN()
+    {
+        System.out.println("-----------------------------------");
+        System.out.println("Введите наименование товара : ");
+        this.nameofprod = in.nextLine();
+        System.out.println("Введите стоимость товара : ");
+        this.price = in.nextInt();
+        System.out.println("Введите информацию о товаре : ");
+        this.info = in1.nextLine();
+        System.out.println("Введите информацию о доставке товара : ");
+        this.delivery = in.nextBoolean();
+        System.out.println("-----------------------------------");
+    }
+
+    public void ProductConsoleOut()
+    {
+        System.out.println("-----------------------------------");
+        System.out.println("Наименование товара : " + nameofprod );
+        System.out.println("Стоимость товара : " + price  );
+        System.out.println("Информация о товаре : " + info );
+        System.out.println("Доставка : " + delivery );
+        System.out.println("-----------------------------------");
+    }
+}
